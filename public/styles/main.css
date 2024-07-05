@@ -1,0 +1,74 @@
+p, h1, li, a {
+  color: white;
+}
+
+p {
+  font-family: monospace;
+  font-size: 14px;
+}
+
+body {
+  background-image: url('/public/img/stars-bg.jpg'); /* Вкажіть шлях до зображення */
+  background-size: cover; /* Або використайте 'contain' чи інші властивості для підгонки */
+  background-repeat: no-repeat; /* Забороняє повторювати зображення */
+  background-attachment: fixed; /* Фон буде залишатися на місці при прокручуванні сторінки */
+  margin: 0;
+}
+
+.info {
+  width: 50%;
+  margin-left: 200px;
+  border-left: 2px solid white;
+  padding-left: 10px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.logo:hover {
+  scale: 1.1;
+  transition: ease-out 200ms;
+}
+
+.logo:not(:hover) {
+  scale: 1;
+  transition: ease-out 200ms;
+}
+
+.logo {
+  height: 72px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.planets-container {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sun {
+  grid-area: 1 / 1;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 1;
+}
+
+.sun .logo {
+  height: 148px; /* Adjust as needed */
+}
+
+.planet {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  transform: rotate(var(--angle)) translate(190px) rotate(calc(-1 * var(--angle)));
+}
