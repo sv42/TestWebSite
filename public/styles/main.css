@@ -8,7 +8,7 @@ p {
 }
 
 body {
-  background-image: url('/public/img/stars-bg.jpg'); /* Вкажіть шлях до зображення */
+  background-image: url('/TestWebSite/public/img/stars-bg.jpg'); /* Вкажіть шлях до зображення */
   background-size: cover; /* Або використайте 'contain' чи інші властивості для підгонки */
   background-repeat: no-repeat; /* Забороняє повторювати зображення */
   background-attachment: fixed; /* Фон буде залишатися на місці при прокручуванні сторінки */
